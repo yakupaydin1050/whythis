@@ -1,4 +1,6 @@
 import { generateEmojiSet } from "./emojiEngine.js";
+import { generateEmojiSetForRule } from "./emojiEngine.js";
+import { getCurrentRule } from "./ruleEngine.js";
 
 export function renderUI() {
   const app = document.getElementById("app");
@@ -16,7 +18,8 @@ export function renderUI() {
 }
 
 function getEmojiGrid() {
-  const emojis = generateEmojiSet(8);
+  const rule = getCurrentRule();
+  const emojis = generateEmojiSetForRule(rule, 8);
 
   return emojis
     .map(
@@ -27,4 +30,4 @@ function getEmojiGrid() {
       `
     )
     .join("");
-} 
+}
