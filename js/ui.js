@@ -1,3 +1,5 @@
+import { generateEmojiSet } from "./emojiEngine.js";
+
 export function renderUI() {
   const app = document.getElementById("app");
 
@@ -14,7 +16,7 @@ export function renderUI() {
 }
 
 function getEmojiGrid() {
-  const emojis = ["🐶", "🍎", "🚗", "🐱", "🍌", "✈️", "🌲", "🏀"];
+  const emojis = generateEmojiSet(8);
 
   return emojis
     .map(
@@ -25,4 +27,4 @@ function getEmojiGrid() {
       `
     )
     .join("");
-}
+} 
