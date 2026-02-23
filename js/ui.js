@@ -1,4 +1,3 @@
-import { generateEmojiSet } from "./emojiEngine.js";
 import { generateEmojiSetForRule } from "./emojiEngine.js";
 import { getCurrentRule } from "./ruleEngine.js";
 
